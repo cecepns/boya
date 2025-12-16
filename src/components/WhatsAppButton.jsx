@@ -3,7 +3,7 @@ import { MessageCircle } from 'lucide-react';
 const WhatsAppButton = () => {
   const handleClick = () => {
     // Ganti dengan nomor WhatsApp Anda (format: 62xxxxxxxxxxx)
-    const phoneNumber = '6281234567890'; // Ubah dengan nomor WhatsApp aktual
+    const phoneNumber = '6281220008601'; // Ubah dengan nomor WhatsApp aktual
     const message = 'Halo, saya ingin bertanya tentang Boya...';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

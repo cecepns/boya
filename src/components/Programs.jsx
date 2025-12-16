@@ -95,7 +95,7 @@ const Programs = () => {
                 <button 
                   onClick={() => {
                     const message = encodeURIComponent(`Hi! I'd like to learn more about ${program.title}.`);
-                    window.open(`https://wa.me/6281234567890?text=${message}`, '_blank');
+                    window.open(`https://wa.me/6281220008601?text=${message}`, '_blank');
                   }}
                   className="mt-6 w-full bg-gray-50 hover:bg-primary-500 text-gray-700 hover:text-white py-3 px-4 rounded-lg transition-all duration-300 font-semibold group-hover:shadow-md"
                 >
@@ -118,7 +118,7 @@ const Programs = () => {
             <button
               onClick={() => {
                 const message = encodeURIComponent("Hi! I'd like to learn more about your programs and schedule a free trial class.");
-                window.open(`https://wa.me/6281234567890?text=${message}`, '_blank');
+                window.open(`https://wa.me/6281220008601?text=${message}`, '_blank');
               }}
               className="bg-white text-primary-500 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 inline-flex items-center"
             >

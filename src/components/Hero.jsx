@@ -43,7 +43,7 @@ const Hero = () => {
 
   const handleFreeTrial = () => {
     const message = encodeURIComponent("Hi! I'm interested in a free trial class at Boya International Learning Center. Could you please provide more information?");
-    window.open(`https://wa.me/6281234567890?text=${message}`, '_blank');
+    window.open(`https://wa.me/6281220008601?text=${message}`, '_blank');
   };
 
   const handleViewPrograms = () => {

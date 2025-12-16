@@ -31,7 +31,7 @@ const Contact = () => {
 ${formData.message}`;
 
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const phoneNumber = '6281234567890'; // Ganti dengan nomor WhatsApp aktual
+    const phoneNumber = '6281220008601'; // Ganti dengan nomor WhatsApp aktual
     
     // Buka WhatsApp dengan pesan yang sudah diformat
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
@@ -47,7 +47,7 @@ ${formData.message}`;
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Hi! I'm interested in learning more about Boya International Learning Center. Could you please provide more information?");
-    window.open(`https://wa.me/6281234567890?text=${message}`, '_blank');
+    window.open(`https://wa.me/6281220008601?text=${message}`, '_blank');
   };
 
   return (
