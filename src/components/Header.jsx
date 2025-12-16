@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Mail } from 'lucide-react';
 import Logo from '../assets/logo.png';
 
 const Header = () => {

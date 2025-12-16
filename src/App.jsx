@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -24,14 +25,16 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="App overflow-x-hidden">
+      <div className="App">
         <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/programs" element={<ProgramsPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/programs" element={<ProgramsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </main>
         <Footer />
         <WhatsAppButton />
       </div>

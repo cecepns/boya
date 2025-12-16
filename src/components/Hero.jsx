@@ -51,8 +51,8 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="pt-20 bg-gradient-to-br from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+    <section id="home" className="bg-gradient-to-br from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div data-aos="fade-right" className="text-center lg:text-left">
