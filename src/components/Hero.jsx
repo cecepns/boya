@@ -1,45 +1,9 @@
-import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Play, Monitor, MapPin, ArrowRight } from 'lucide-react';
+import { Play, ArrowRight } from 'lucide-react';
 import BgImage1 from '../assets/bg-image1.png';
 
 const Hero = () => {
   const navigate = useNavigate();
-  const [stats, setStats] = useState({
-    since: 0,
-    satisfaction: 0,
-    students: 0
-  });
-
-  useEffect(() => {
-    const finalStats = {
-      since: 2018,
-      satisfaction: 98,
-      students: 2500
-    };
-
-    const animateCounter = (key, target, duration = 2000) => {
-      let start = 0;
-      const increment = target / (duration / 16);
-      
-      const timer = setInterval(() => {
-        start += increment;
-        if (start >= target) {
-          start = target;
-          clearInterval(timer);
-        }
-        setStats(prev => ({ ...prev, [key]: Math.floor(start) }));
-      }, 16);
-    };
-
-    const timer = setTimeout(() => {
-      animateCounter('since', finalStats.since, 1500);
-      animateCounter('satisfaction', finalStats.satisfaction, 2000);
-      animateCounter('students', finalStats.students, 2500);
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleFreeTrial = () => {
     const message = encodeURIComponent("Hi! I'm interested in a free trial class at Boya International Learning Center. Could you please provide more information?");
@@ -72,7 +36,7 @@ const Hero = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={handleFreeTrial}
                 className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-xl"
@@ -88,20 +52,6 @@ const Hero = () => {
                 View Programs
               </button>
             </div>
-
-            {/* Class Options */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                <Monitor className="w-8 h-8 text-primary-500 mb-3" />
-                <h3 className="font-semibold text-gray-900 mb-2">Virtual Classes</h3>
-                <p className="text-gray-600 text-sm">Interactive online learning with flexible scheduling</p>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                <MapPin className="w-8 h-8 text-primary-500 mb-3" />
-                <h3 className="font-semibold text-gray-900 mb-2">On-site Classes</h3>
-                <p className="text-gray-600 text-sm">Face-to-face learning in our Jakarta facility</p>
-              </div>
-            </div>
           </div>
 
           {/* Right Content - Image */}
@@ -116,7 +66,7 @@ const Hero = () => {
             </div>
             
             {/* Floating Stats Card */}
-            <div className="absolute -bottom-8 left-1 md:-left-8 bg-white p-6 rounded-xl shadow-xl border border-gray-100 z-10">
+            {/* <div className="absolute -bottom-8 left-1 md:-left-8 bg-white p-6 rounded-xl shadow-xl border border-gray-100 z-10">
               <div className="grid grid-cols-3 gap-6 text-center">
                 <div>
                   <div className="text-2xl font-bold text-primary-500">{stats.since}</div>
@@ -131,7 +81,7 @@ const Hero = () => {
                   <div className="text-xs text-gray-600">Students</div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

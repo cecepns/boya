@@ -47,16 +47,21 @@ const Programs = () => {
   ];
 
   return (
-    <section id="programs" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="programs" className="py-20 bg-decorative-orange decorative-circles">
+      {/* Decorative Circles */}
+      <div className="circle-1"></div>
+      <div className="circle-2"></div>
+      <div className="circle-3"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-            Our Programs
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Available Classes
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-orange-100 max-w-3xl mx-auto mb-8">
             Comprehensive educational programs designed to meet diverse learning needs and international standards
           </p>
-          <div className="w-24 h-1 bg-primary-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-white mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -108,11 +113,11 @@ const Programs = () => {
 
         {/* CTA Section */}
         <div className="mt-16 text-center" data-aos="fade-up">
-          <div className="bg-primary-500 text-white p-8 lg:p-12 rounded-2xl">
+          <div className="bg-white/95 backdrop-blur-sm text-gray-900 p-8 lg:p-12 rounded-2xl shadow-xl">
             <h3 className="text-2xl lg:text-3xl font-bold mb-4">
               Ready to Start Your Learning Journey?
             </h3>
-            <p className="text-primary-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               Contact us today to discuss which program is right for you and schedule your free trial class.
             </p>
             <button
@@ -120,7 +125,7 @@ const Programs = () => {
                 const message = encodeURIComponent("Hi! I'd like to learn more about your programs and schedule a free trial class.");
                 window.open(`https://wa.me/6281220008601?text=${message}`, '_blank');
               }}
-              className="bg-white text-primary-500 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 inline-flex items-center"
+              className="bg-primary-500 text-white hover:bg-primary-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300 inline-flex items-center shadow-lg hover:shadow-xl"
             >
               Contact Us Now
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
