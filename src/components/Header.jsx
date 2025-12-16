@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X, Mail } from 'lucide-react';
+import GoogleTranslate from './GoogleTranslate';
 import Logo from '../assets/logo.png';
 
 const Header = () => {
@@ -44,6 +45,9 @@ const Header = () => {
             <NavLink to="/contact" className={navLinkClass}>
               Contact
             </NavLink>
+
+            <GoogleTranslate />
+        
           </nav>
 
           {/* Contact Info */}
@@ -79,6 +83,9 @@ const Header = () => {
               <NavLink to="/contact" onClick={closeMenu} className={navLinkClass}>
                 Contact
               </NavLink>
+
+              <GoogleTranslate />
+
             </div>
           </div>
         )}
