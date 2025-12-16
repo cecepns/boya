@@ -44,7 +44,7 @@ const WhatYouGet = () => {
     <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Stats Cards */}
-        <div className="grid gap-14 grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto" data-aos="fade-up">
+        <div className="grid gap-20 grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto" data-aos="fade-up">
           {/* Trusted Since Card */}
           <div className="relative bg-white rounded-2xl shadow-lg border-2 border-teal-500 p-8 text-center">
             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-teal-600 rounded-full p-5 shadow-xl">
@@ -96,7 +96,7 @@ const WhatYouGet = () => {
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16" data-aos="fade-up" data-aos-delay="400">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-12 mt-16" data-aos="fade-up" data-aos-delay="400">
           {/* Trusted Quality */}
           <div className="text-center">
             <div className="flex justify-center mb-6">

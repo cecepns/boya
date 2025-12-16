@@ -92,7 +92,7 @@ const ClassOptions = () => {
         </div>
 
         {/* Additional Info */}
-        <div
+        {/* <div
           data-aos="fade-up"
           data-aos-delay="200"
           className="mt-12 text-center bg-blue-50 rounded-2xl p-8 border border-blue-100"
@@ -111,7 +111,7 @@ const ClassOptions = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
