@@ -1,4 +1,4 @@
-import { Award, Globe, Users, Target } from 'lucide-react';
+import { Award, Globe, Users, Target, MapPin, Mail } from 'lucide-react';
 
 const About = () => {
   return (
@@ -105,6 +105,57 @@ const About = () => {
             <p className="text-gray-700 leading-relaxed">
               To provide high-quality, personalized education and language training programs that meet international standards, delivered by experienced educators using innovative teaching methodologies and comprehensive learning resources.
             </p>
+          </div>
+        </div>
+
+        {/* Contact Information */}
+        <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div data-aos="fade-up" className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm">
+            <div className="flex items-start space-x-4">
+              <div className="bg-primary-500 p-3 rounded-lg flex-shrink-0">
+                <MapPin className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Our Location</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Galeri Niaga Mediterania II<br />
+                  Jl. Pantai Indah Utara 2, RT.1/RW.16<br />
+                  Blok M8B. Pantai Indah Kapuk<br />
+                  Jakarta Utara
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div data-aos="fade-up" data-aos-delay="100" className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm">
+            <div className="flex items-start space-x-4">
+              <div className="bg-primary-500 p-3 rounded-lg flex-shrink-0">
+                <Mail className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Email Address</h3>
+                <div className="space-y-2">
+                  <div>
+                    <p className="text-gray-700 mb-1">General Inquiry</p>
+                    <a 
+                      href="mailto:info@boyalearningcenter.com" 
+                      className="text-primary-500 hover:text-primary-600 font-medium transition-colors"
+                    >
+                      info@boyalearningcenter.com
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-gray-700 mb-1">Career</p>
+                    <a 
+                      href="mailto:career@boyalearningcenter.com" 
+                      className="text-primary-500 hover:text-primary-600 font-medium transition-colors"
+                    >
+                      career@boyalearningcenter.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

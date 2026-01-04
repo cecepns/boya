@@ -25,6 +25,10 @@ const Hero = () => {
               International Standard Education
             </div>
             
+            <p className="text-lg lg:text-xl text-gray-700 mb-4 font-medium">
+              Welcome to Boya International Learning Center.
+            </p>
+            
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Unlock Your
               <span className="text-primary-500 block">Global Potential</span>
