@@ -1,48 +1,106 @@
-import { BookOpen, Globe, GraduationCap, Building, Award, Languages, Monitor } from 'lucide-react';
+import { BookOpen, Award, Building, Calendar } from 'lucide-react';
 
 const Programs = () => {
   const programs = [
     {
       icon: BookOpen,
-      title: "Tuition Center for Cambridge Curriculum",
-      description: "Comprehensive Cambridge curriculum support with experienced tutors and proven methodologies.",
-      features: ["IGCSE Preparation", "A-Level Support", "Cambridge Assessment"]
-    },
-    {
-      icon: GraduationCap,
-      title: "Tuition Center for IB Curriculum",
-      description: "International Baccalaureate program guidance for academic excellence and global recognition.",
-      features: ["IB Diploma Programme", "Extended Essay Support", "TOK Guidance"]
+      level: "Nursery – Kindergarten",
+      title: "Early Achievers (EA)",
+      description: "A foundational program designed for early learners to build academic readiness and language skills from a young age.",
+      classStructure: [
+        "2 meetings of school subjects",
+        "1 free meeting of Phonics Thematic Class"
+      ],
+      learningMethods: [
+        "Flashcards",
+        "Digital video and audio learning",
+        "Role play activities",
+        "Guided reading sessions"
+      ],
+      learningMethodsLabel: "Learning Methods & Focus:"
     },
     {
       icon: Award,
-      title: "Tuition Center for National Curriculum",
-      description: "Indonesian national curriculum enhancement with international learning approaches.",
-      features: ["UN Preparation", "Local Curriculum", "Academic Support"]
+      level: "Primary 1 – 3",
+      title: "Confident Young Minds (CYM)",
+      description: "A program aimed at developing confidence, creativity, and strong character in young learners.",
+      classStructure: [
+        "2–3 meetings of school subjects",
+        "1 meeting of Business Class"
+      ],
+      learningMethods: [
+        "Public speaking",
+        "Creative thinking",
+        "Character building",
+        "Opportunity-seeking mindset"
+      ]
     },
     {
       icon: Building,
-      title: "Corporate & Professional English Training",
-      description: "Business English and professional communication skills for working professionals.",
-      features: ["Business English", "Presentation Skills", "Corporate Training"]
+      level: "Primary 4 – 6",
+      title: "Business Explorers (BE)",
+      description: "A program that introduces students to basic business concepts while strengthening communication skills.",
+      classStructure: [
+        "2–3 meetings of school subjects",
+        "1 meeting of Business Class"
+      ],
+      learningMethods: [
+        "Public speaking",
+        "Persuasion skills",
+        "Communication skills",
+        "Basic selling concepts"
+      ]
     },
     {
-      icon: Globe,
-      title: "IELTS, TOEFL & TOEIC Preparation Courses",
-      description: "Comprehensive test preparation for international language proficiency certifications.",
-      features: ["Test Strategies", "Practice Tests", "Score Improvement"]
+      icon: Building,
+      level: "Secondary 1 – 3",
+      title: "Growingpreneur Minds (GM)",
+      description: "A program designed to nurture leadership qualities and entrepreneurial thinking in early secondary students.",
+      classStructure: [
+        "2–3 meetings of school subjects",
+        "1 meeting of Business Class"
+      ],
+      learningMethods: [
+        "Public speaking",
+        "Financial literacy",
+        "Leadership development",
+        "Entrepreneurship"
+      ]
     },
     {
-      icon: Languages,
-      title: "HSK (Chinese Proficiency) Courses",
-      description: "Chinese language learning and HSK test preparation for all proficiency levels.",
-      features: ["HSK 1-6 Levels", "Cultural Context", "Speaking Practice"]
+      icon: Building,
+      level: "Secondary 4 – 6",
+      title: "Creative Earning Opportunities (CEO)",
+      description: "An advanced program that empowers students to explore creative income opportunities while enhancing leadership and business skills.",
+      classStructure: [
+        "2–3 meetings of school subjects",
+        "1 meeting of Business Class"
+      ],
+      learningMethods: [
+        "Public speaking",
+        "Financial literacy",
+        "Leadership",
+        "Entrepreneurship"
+      ]
     },
     {
-      icon: Monitor,
-      title: "Comprehensive Online English Program",
-      description: "Flexible online English learning with interactive materials and live instruction.",
-      features: ["Live Sessions", "Interactive Materials", "Flexible Schedule"]
+      icon: Calendar,
+      level: "Holiday Camp",
+      title: "Holiday Camp Program (2 Weeks or 1 Month)",
+      description: "A fun and structured holiday programme designed to introduce students to business fundamentals, entrepreneurship, and essential life skills.",
+      classStructure: [],
+      learningMethods: [
+        "Creative earning opportunities",
+        "Communication and teamwork skills",
+        "Critical thinking and problem-solving",
+        "Increased confidence and independence",
+        "A strong entrepreneurial mindset"
+      ],
+      highlights: [
+        "Interactive learning activities",
+        "Hands-on projects",
+        "Real-world problem-solving experiences"
+      ]
     }
   ];
 
@@ -80,6 +138,12 @@ const Programs = () => {
                   </div>
                 </div>
                 
+                {program.level && (
+                  <p className="text-sm font-semibold text-primary-600 mb-2">
+                    {program.level}
+                  </p>
+                )}
+                
                 <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">
                   {program.title}
                 </h3>
@@ -88,14 +152,49 @@ const Programs = () => {
                   {program.description}
                 </p>
                 
-                <div className="space-y-2">
-                  {program.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <div className="w-2 h-2 bg-primary-500 rounded-full mr-3"></div>
-                      {feature}
+                {program.classStructure && program.classStructure.length > 0 && (
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Class Structure:</h4>
+                    <div className="space-y-2">
+                      {program.classStructure.map((item, itemIndex) => (
+                        <div key={itemIndex} className="flex items-start text-sm text-gray-600">
+                          <div className="w-2 h-2 bg-primary-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                          <span>{item}</span>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  </div>
+                )}
+                
+                {program.highlights && program.highlights.length > 0 && (
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Programme Highlights:</h4>
+                    <div className="space-y-2">
+                      {program.highlights.map((item, itemIndex) => (
+                        <div key={itemIndex} className="flex items-start text-sm text-gray-600">
+                          <div className="w-2 h-2 bg-primary-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {program.learningMethods && program.learningMethods.length > 0 && (
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3">
+                      {program.learningMethodsLabel || (program.highlights ? "Learning Outcomes:" : "Key Focus Areas:")}
+                    </h4>
+                    <div className="space-y-2">
+                      {program.learningMethods.map((item, itemIndex) => (
+                        <div key={itemIndex} className="flex items-start text-sm text-gray-600">
+                          <div className="w-2 h-2 bg-primary-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
                 
                 <button 
                   onClick={() => {

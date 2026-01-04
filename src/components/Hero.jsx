@@ -30,10 +30,20 @@ const Hero = () => {
               <span className="text-primary-500 block">Global Potential</span>
             </h1>
             
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-600 mb-4 leading-relaxed">
               Professional education and language training designed to international standards. 
               Achieve academic excellence and global competency with our expert guidance.
             </p>
+            
+            {/* Tagline */}
+            <div className="mb-8 p-4 bg-primary-50 border-l-4 border-primary-500 rounded-r-lg">
+              <p className="text-lg lg:text-xl font-bold text-gray-900 mb-2">
+                Pay once in Business Class for your child, GET Free tuition Program !
+              </p>
+              <p className="text-base lg:text-lg text-gray-700 italic">
+                (All subject and curriculum are available !)
+              </p>
+            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">

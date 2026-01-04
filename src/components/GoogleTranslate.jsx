@@ -13,19 +13,10 @@ const GoogleTranslate = ({ closeOnComplete = true, onComplete } = {}) => {
 
   const normalizeLang = useCallback((code) => {
     if (!code) return "en";
-    const str = String(code);
+    const lower = String(code).toLowerCase();
     // Handle legacy Indonesian code 'in' → 'id'
-    if (str.toLowerCase() === "in") return "id";
-    
-    // Handle language codes with region (e.g., zh-CN, zh-TW, pt-BR)
-    // Format: language code (lowercase) + hyphen + region code (uppercase)
-    if (str.includes("-")) {
-      const parts = str.split("-");
-      return parts[0].toLowerCase() + "-" + parts[1].toUpperCase();
-    }
-    
-    // For simple language codes, return lowercase
-    return str.toLowerCase();
+    if (lower === "in") return "id";
+    return lower;
   }, []);
 
   useEffect(() => {
@@ -338,7 +329,7 @@ const GoogleTranslate = ({ closeOnComplete = true, onComplete } = {}) => {
 
         {isOpen && (
           <div
-            className="absolute md:right-0 mt-2 top-12 w-48 bg-white rounded-md shadow-lg z-50 border border-gray-200 notranslate"
+            className="absolute md:right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 border border-gray-200 notranslate"
             translate="no"
           >
             <div className="py-1">
